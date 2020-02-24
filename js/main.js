@@ -49,10 +49,7 @@ class ProductList {
   }
 //Метод для вычисления суммы товаров
   sumOfGoods() {
-        let sum = 0;
-        this.goods.forEach(good => {
-            sum +=this.goods.price;
-        })
+      return this.allProducts.reduce((accum, item) => accum += item.price, 0);
   }
 }
 
